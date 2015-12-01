@@ -55,10 +55,13 @@ plugins=(git wd)
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-
+#thefuck
+eval $(thefuck --alias)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+#aliases
+source $HOME/.aliases
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
