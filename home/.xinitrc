@@ -10,5 +10,7 @@ fi
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 setxkbmap -option ctrl:nocaps
 setxkbmap -model pc104 -layout dk,us  -option grp:alt_shift_toggle
+
+sudo systemctl start NetworkManager.service
 sudo rfkill unblock wlan
 exec i3
