@@ -54,6 +54,9 @@ plugins=(git wd)
 # User configuration
 
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH=~/go
+export PATH="$PATH:$GOPATH/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 #thefuck
 eval $(thefuck --alias)
