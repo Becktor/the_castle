@@ -6,10 +6,10 @@ Xft.hinting:                true
 Xft.hintstyle:              hintslight
 urxvt*letterSpace:          -1
 
-urxvt*font:                 xft:Monospace:pixelsize=18:antialias=true
-urxvt*boldFont xft:         Monospace:pixelsize=18:antialias=true:bold
-urxvt*italicFont:           xft:Monospace:pixelsize=18:antialias=true:italic:autohint=true
-urxvt*bolditalicFont:       xft:Monospace:pixelsize=18:antialias=true:bold:italic:autohint=true
+urxvt*font:                 xft:Monospace:pixelsize=11:antialias=true
+urxvt*boldFont xft:         Monospace:pixelsize=11:antialias=true:bold
+urxvt*italicFont:           xft:Monospace:pixelsize=11:antialias=true:italic:autohint=true
+urxvt*bolditalicFont:       xft:Monospace:pixelsize=11:antialias=true:bold:italic:autohint=true
 
 urxvt*tintColor:            #ffa500
 urxvt*scrollBar:            false

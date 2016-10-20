@@ -85,19 +85,16 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# set lang options
-setxkbmap -model pc104 -layout dk,us -option grp:alt_shift_toggle
-
 # audio keys
 bindsym XF86AudioRaiseVolume exec amixer -c 1 set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -c 1 set Master 5%-
 bindsym XF86AudioMute exec amixer -c 1 set Master toggle
 
+#youtube livestreamer
+bindsym $mod+Shift+y exec livestreamer -p cvlc $(xclip -o) best &
 # brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
-
-
+bindsym XF86MonBrightnessUp exec light -A 10
+bindsym XF86MonBrightnessDown exec light -U 10
 
 
 # scrot & gimp - root
@@ -166,5 +163,5 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
       status_command i3blocks -c $HOME/.i3/i3blocks.conf
-    font pango:Monospace, Monospace 16
+    font pango:Monospace, Monospace 10
 }
