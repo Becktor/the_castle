@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+ZSH=~/.oh-my-zsh
 
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
@@ -37,5 +37,21 @@ transfer() {
     /home/jobe/bin/transfer.sh $@
 }
 
+rb() {
+    sudo reboot
+}
+
+pm() {
+    sudo pacman $@
+}
+
+y() {
+    yaourt $@ --noconfirm
+}
+
 export ALTERNATE_EDITOR=""
 export EDITOR=emacsclient
+
+alias emax="emacsclient -t"                      # used to be "emacs -nw"
+alias semac="sudo emacsclient -t"                # used to be "sudo emacs -nw"
+alias emacsc="emacsclient -c -a emacs"           # new - opens the GUI with alternate non-daemon

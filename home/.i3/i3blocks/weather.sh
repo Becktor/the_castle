@@ -10,8 +10,8 @@
 # @return {Number(degrees Fahrenheit)}: Current temperature in Cincinnati
 ################################
 
-dir=$(dirname $0)
-source $dir/util.sh
+#dir=$(dirname $0)
+#source $dir/util.sh
 
 full=""
 short=""
