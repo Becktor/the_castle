@@ -19,4 +19,6 @@
 	editor = emacs
 [apply]
 	whitespace = fix
-
+[github]
+	user = becktor
+	token = token

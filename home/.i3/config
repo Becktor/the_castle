@@ -86,13 +86,14 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 
 # audio keys
-bindsym XF86AudioRaiseVolume exec amixer -c 1 set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -c 1 set Master 5%-
-bindsym XF86AudioMute exec amixer -c 1 set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 5%-
+bindsym XF86AudioMute exec amixer -c 0 set Master toggle
 
 #youtube livestreamer
 bindsym $mod+Shift+y exec livestreamer -p cvlc $(xclip -o) best &
-# brightness
+
+#brightness
 bindsym XF86MonBrightnessUp exec light -A 10
 bindsym XF86MonBrightnessDown exec light -U 10
 
