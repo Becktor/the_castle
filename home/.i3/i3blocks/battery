@@ -53,13 +53,13 @@ if ($status eq 'Discharging') {
         }
 
 } elsif ($status eq 'Charging') {
-	$full_text .= ' ';
+    $full_text .= ' ';
 } elsif ($status eq 'Unknown') {
-    $full_text .= ' ';
+    $full_text .= '';
 } elsif ($status eq 'Full') {
-    $full_text .= ' ';
+    $full_text .= '';
 }
-$full_text .= " $percent%";
+$full_text .= "$percent%";
 $short_text = $full_text;
 
 if ($acpi =~ /(\d\d:\d\d):/) {

@@ -21,6 +21,7 @@ sub help {
     print "-w <percent>: warning threshold to become yellow\n";
     print "-c <percent>: critical threshold to become red\n";
     exit 0;
+
 }
 
 GetOptions("help|h" => \&help,

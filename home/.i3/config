@@ -91,7 +91,7 @@ bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 5%-
 bindsym XF86AudioMute exec amixer -c 0 set Master toggle
 
 #youtube livestreamer
-bindsym $mod+Shift+y exec livestreamer -p cvlc $(xclip -o) best &
+bindsym $mod+Shift+y exec streamlink -p cvlc $(xclip -o) best &
 
 #brightness
 bindsym XF86MonBrightnessUp exec light -A 10
@@ -99,9 +99,9 @@ bindsym XF86MonBrightnessDown exec light -U 10
 
 
 # scrot & gimp - root
-bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
-# scrot & gimp - select window or rectangle
-bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym $mod+Print exec escrotum -e 'mv $f /tmp/ && gimp /tmp/$f'
+#l scrot & gimp - select window or rectangle
+bindsym $mod+Shift+Print exec escrotum -s -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 # switch to workspace
 bindsym $mod+1 workspace 1

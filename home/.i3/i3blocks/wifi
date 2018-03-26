@@ -33,7 +33,7 @@ SSID=$(iw dev wlp58s0 link | grep SSID | cut -d " " -f 2-)
 #------------------------------------------------------------------------
 
 echo   $SSID $QUALITY% # full text
-echo $SSID $QUALITY% # short text
+echo $SSID $QUAlLITY% # short text
 
 # color
 if [[ $QUALITY -ge 80 ]]; then

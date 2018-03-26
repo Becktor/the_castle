@@ -64,6 +64,21 @@ cwd(){
 nemid(){
     python /home/jobe/bin/nemid.py $@
 }
+
+lh(){
+    ll -h
+}
+
+#lockscreen
+lock (){
+    xscreensaver-command --lock
+}
+
+#activate anaconda pyenvs
+ana (){
+    pyenv activate anaconda3-4.2.0
+}
+
 export ALTERNATE_EDITOR=""
 export EDITOR=emacsclient
 
@@ -82,12 +97,13 @@ then
     ssh-add -l >/dev/null || alias ssh='ssh-add -l >/dev/null || ssh-add && unalias ssh; ssh'
 fi
 
-#lockscreen
+#autocomplete from host ssh
+zstyle -s ':completion:*:hosts' hosts _ssh_config
+[[ -r ~/.ssh/config ]] && _ssh_config+=($(cat ~/.ssh/config | sed -ne 's/Host[=\t ]//p'))
+zstyle ':completion:*:hosts' hosts $_ssh_config
 
-lock (){
-    xscreensaver-command --lock
-}
 
+#pyenv
 export PATH="/home/jobe/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
